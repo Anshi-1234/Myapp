@@ -32,7 +32,8 @@ def run_app():
     # Input fields
     prompt = st.text_area("Enter the existing content:")
     token_count = st.number_input("Enter the desired token count:", min_value=1, step=1)
-    source_language = st.text_input("Enter the source language:")
+    source_language = st.selectbox("Enter the source language:",
+    ('en, 'auto', 'ko','es','el','ru))
     temperature = st.slider("Select the temperature:", min_value=0.1, max_value=1.0, step=0.1, value=0.7)
     n_gen = st.number_input("Enter the number of generated content:", min_value=1, step=1)
 
