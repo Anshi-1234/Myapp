@@ -23,7 +23,9 @@ def generate_content(prompt, token_count, source_language, temperature, n_gen):
         n_gen=n_gen
     )
 
-    return paraphrased_text
+    generated_content = paraphrased_text[0]['text'] if paraphrased_text else ''
+
+    return generated_content
 
 # Streamlit app
 def run_app():
