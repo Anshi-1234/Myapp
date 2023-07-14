@@ -42,7 +42,7 @@ def run_app():
     if st.button("Generate Content"):
         if prompt:
             # Generate content
-            generated_content = generate_content(prompt, token_count, source_language, temperature, n_gen)
+            generated_content = generate_content(prompt, token_count*4, source_language, temperature, n_gen)
 
             # Display generated content
             st.subheader("Generated Content:")
